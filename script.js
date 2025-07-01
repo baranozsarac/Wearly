@@ -3,6 +3,7 @@ const clothUpload = document.getElementById('cloth-upload');
 const userImg = document.getElementById('user-img');
 const clothImg = document.getElementById('cloth-img');
 const scaleInput = document.getElementById('scale');
+ h5iqt5-codex/implement-photo-upload-and-transformation-feature
 const generateBtn = document.getElementById('generate');
 const resultImg = document.getElementById('result-img');
 let dragging = false;
@@ -18,12 +19,20 @@ async function loadModel() {
   }
 }
 
+let dragging = false;
+let offsetX = 0;
+let offsetY = 0;
+ main
+
 userUpload.addEventListener('change', e => {
   const file = e.target.files[0];
   if (file) {
     userImg.src = URL.createObjectURL(file);
     userImg.hidden = false;
+ h5iqt5-codex/implement-photo-upload-and-transformation-feature
     loadModel();
+
+ main
   }
 });
 
@@ -36,7 +45,10 @@ clothUpload.addEventListener('change', e => {
     clothImg.style.top = '0px';
     clothImg.style.transform = 'scale(1)';
     scaleInput.value = 1;
+ h5iqt5-codex/implement-photo-upload-and-transformation-feature
     loadModel();
+
+ main
   }
 });
 
@@ -60,6 +72,7 @@ document.addEventListener('mouseup', () => {
 scaleInput.addEventListener('input', e => {
   clothImg.style.transform = `scale(${e.target.value})`;
 });
+ h5iqt5-codex/implement-photo-upload-and-transformation-feature
 
 generateBtn.addEventListener('click', async () => {
   if (!userImg.src || !clothImg.src || !net) return;
@@ -105,3 +118,5 @@ generateBtn.addEventListener('click', async () => {
   resultImg.hidden = false;
   generateBtn.disabled = false;
 });
+=======
+ main
