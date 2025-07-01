@@ -23,3 +23,16 @@ body {
 #cloth-img {
     cursor: move;
 }
+
+#generate {
+    margin-top: 10px;
+}
+
+#result {
+    margin-top: 20px;
+}
+
+#result-img {
+    max-width: 100%;
+    border: 1px solid #ccc;
+}
