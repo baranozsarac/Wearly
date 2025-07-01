@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wearly Try-On</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.21.0/dist/tf.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/body-pix@2.0.5/dist/body-pix.min.js"></script>
+</head>
+<body>
+    <h1>Wearly</h1>
+    <div id="uploader">
+        <label>User photo: <input type="file" id="user-upload" accept="image/*"></label>
+        <label>Clothing item: <input type="file" id="cloth-upload" accept="image/*"></label>
+        <label>Scale: <input type="range" id="scale" min="0.2" max="3" step="0.1" value="1"></label>
+    </div>
+    <div id="canvas-container">
+        <img id="user-img" alt="User preview" hidden>
+        <img id="cloth-img" alt="Clothing preview" hidden>
+    </div>
+    <button id="generate" disabled>Generate</button>
+    <div id="result">
+        <h2>Result</h2>
+        <img id="result-img" alt="Result" hidden>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
